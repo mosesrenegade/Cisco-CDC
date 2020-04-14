@@ -3,7 +3,6 @@ localhost
 
 [oob:vars]
 ansible_python_interpreter=/usr/bin/python3
-anisble_connection=local
 
 [kali]
 198.18.133.6
