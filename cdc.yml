@@ -5,3 +5,10 @@
 
   roles:
   - kali
+
+- hosts: oob
+  become: yes
+  become_user: root
+
+  roles:
+  - oob
