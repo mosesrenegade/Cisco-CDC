@@ -1,0 +1,6 @@
+---
+-
+kali_installed_packages:
+- xrdp
+- xrdp-sesman
+- powershell-empire

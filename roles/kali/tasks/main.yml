@@ -21,7 +21,19 @@
   apt:
     autoremove: yes
 
-#- name: install extra stuff
-#  apt:  
-#    name: "{{ kali_installed_packages }}"
-#    state: present
+- name: install the kali packages for our latest build
+  apt:  
+    name: "{{ kali_installed_packages }}"
+    state: present
+
+- name: Start the XRDP Service
+  systemd:
+    state: started
+    name: xrdp
+    enabled: yes
+
+- name: Start the XDRP Session Manager
+  systemd:
+    state: started
+    name: xrdp-sesman
+    enabled: yes
