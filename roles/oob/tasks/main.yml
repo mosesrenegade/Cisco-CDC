@@ -1,0 +1,10 @@
+---
+- name: Make copy of file
+  copy:
+    src: /etc/guacamole/user-mapping.xml
+    dest: /etc/guacamole/user-mapping.xml-old
+
+- name: Install new user-mapping.xml file
+  template: 
+    src: user-mapping.xml.j2
+    dest: /etc/guacamole/user-mapping.xml
