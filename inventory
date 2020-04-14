@@ -11,3 +11,12 @@ ansible_python_interpreter=/usr/bin/python3
 ansible_python_interpreter=/usr/bin/python3
 ansible_connection=ssh
 
+[jumphost]
+198.18.133.50
+
+[jumphost:vars]
+ansible_user=Administrator
+ansible_connection=winrm
+ansible_port=5986
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore
