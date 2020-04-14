@@ -1,11 +1,4 @@
 ---
-- hosts: kali
-  become: yes
-  become_user: root
-
-  roles:
-  - kali
-
 - hosts: oob
   connection: local
   become: yes
@@ -13,3 +6,11 @@
 
   roles:
   - oob
+
+- hosts: kali
+  become: yes
+  become_user: root
+
+  roles:
+  - kali
+

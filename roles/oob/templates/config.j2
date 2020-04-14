@@ -1,0 +1,11 @@
+Host *
+  ControlPath ~/.ssh/cm-%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+  User dcloud
+Host kali
+  Hostname 198.18.133.6
+  User root
+Host infra
+  Hostname 198.18.133.5
+  User dcloud
