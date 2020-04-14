@@ -1,0 +1,7 @@
+---
+- hosts: kali
+  become: yes
+  become_user: root
+
+  roles:
+  - kali

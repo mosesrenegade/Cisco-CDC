@@ -1,0 +1,27 @@
+---
+- name: apt update packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    force_apt_get: yes
+  become: true
+  become_user: root
+
+- name: apt upgrade 
+  apt:
+    upgrade: dist
+    update_cache: yes
+    dpkg_options: 'force-confold,force-confdef'
+
+- name: apt clean
+  apt:
+    autoclean: yes
+
+- name: apt autoremove
+  apt:
+    autoremove: yes
+
+#- name: install extra stuff
+#  apt:  
+#    name: "{{ kali_installed_packages }}"
+#    state: present

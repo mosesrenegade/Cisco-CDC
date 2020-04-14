@@ -1,0 +1,7 @@
+[kali]
+198.18.133.6
+
+[kali:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=ssh
+
