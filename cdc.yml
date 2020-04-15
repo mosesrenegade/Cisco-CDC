@@ -14,3 +14,7 @@
   roles:
   - kali
 
+- hosts: jumphost
+
+  roles:
+  - windows

@@ -3,7 +3,8 @@
 sudo apt update -y 
 sudo apt dist-upgrade -y
 sudo apt autoremove -y
-sudo apt install ansible sshpass python3-winrm -y
+sudo apt install ansible sshpass python3-winrm python-pip -y
+pip install pywinrm
 ssh-keygen
 echo 'Copying Key to infra'
 ssh-copy-id dcloud@198.18.133.5
