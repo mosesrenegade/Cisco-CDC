@@ -37,3 +37,8 @@
     state: started
     name: xrdp-sesman
     enabled: yes
+
+- name: Let's make sure the COVIDLure exists
+  copy:
+    src: files/COVID19ResponseQ4.doc
+    dest: /root/Desktop/COVID19ResponseQ4.doc
