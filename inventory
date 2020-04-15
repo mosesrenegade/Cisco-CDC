@@ -52,7 +52,7 @@ ansible_python_interpreter=/usr/bin/python3
 198.19.40.253
 
 [asa:vars]
-username: admin
-password: C1sco12345
-authorize: yes
-auth_pass: C1sco12345
+username=admin
+password=C1sco12345
+authorize=yes
+auth_pass=C1sco123453

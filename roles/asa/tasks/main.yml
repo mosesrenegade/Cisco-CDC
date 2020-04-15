@@ -1,0 +1,35 @@
+---
+- name: Configure the new Objects in the ASA
+  asa_config:
+    lines:
+      - object network apt32_80.255.3.87
+      - host 80.255.3.87
+    provider: "{{ cli }}"
+    register: nat
+
+- name: Configure the new Objects in the ASA
+  asa_config:
+    lines:     
+      - object network kali_apt32
+      - host 198.18.133.60
+    provider: "{{ cli }}"
+    register: nat
+
+- name: Configure the new Objects in the ASA
+  asa_config:
+    lines:
+      - object network Internal_nets
+      - subnet 198.19.0.0 255.255.0.0
+    provider: "{{ cli }}"
+    register: nat
+
+- name: Configure the new Objects in the ASA
+  asa_config:
+    lines:
+      - nat (inside,outside) 2 source static Internal_nets Internal_nets destination static apt32_80.255.3.87 kali_apt32 no-proxy-arp
+    provider: "{{ cli }}"
+    register: nat
+
+- name: Let's see the NAT
+  debug:
+    var: nat
