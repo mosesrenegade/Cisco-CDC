@@ -1,7 +1,4 @@
 kali_installed_packages:
-- dbus
-- NetworkManager-glib
-- nmcli
 - powershell-empire
 - xrdp
 
