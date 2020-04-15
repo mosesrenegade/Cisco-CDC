@@ -1,0 +1,6 @@
+---
+- name: Copy NVM Stuff
+  win_copy:
+    src: files/NVM_ServiceProfile.xml
+    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml'
+

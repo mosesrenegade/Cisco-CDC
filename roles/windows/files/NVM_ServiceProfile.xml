@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NVMProfile xsi:noNamespaceSchemaLocation="NVMProfile.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CollectorConfiguration>
+		<CollectorIP>198.19.10.9</CollectorIP>
+		<Port>2055</Port>
+	</CollectorConfiguration>
+	<TemplateReportInterval>1440</TemplateReportInterval>
+	<AggInterval>5</AggInterval>
+	<ThrottleRate>500</ThrottleRate>
+	<CollectionMode>all</CollectionMode>
+	<CollectionCriteria>
+		<Broadcast>false</Broadcast>
+		<Multicast>false</Multicast>
+	</CollectionCriteria>
+	<DataCollectionPolicy>
+	</DataCollectionPolicy>
+</NVMProfile>
+
