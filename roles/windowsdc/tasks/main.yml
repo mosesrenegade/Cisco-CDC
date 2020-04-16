@@ -1,0 +1,22 @@
+---
+- name: Copy NVM Stuff
+  win_copy:
+    src: files/NVM_ServiceProfile.xml
+    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml'
+
+- name: Copy AC Profile
+  win_copy:
+    src: files/acvpn.xml
+    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\acvpn.xml'
+
+- name: Add APT32 Zone for chinabytes.info
+  win_shell: Add-DnsServerPrimaryZone -Name "chinabytes.info" -ReplicationScope "Forest" -PassThru
+
+- name: add apt32 domains
+  win_dns_record: 
+    name: "images"
+    type: "A"
+    value: "198.18.133.60
+    zone: "chinabytes.info"
+
+

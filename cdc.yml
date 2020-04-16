@@ -19,9 +19,15 @@
   roles:
   - windows
 
+- hosts: windowsdc
+
+  roles:
+  - windowsdc
+
 - hosts: attackerc2
   become: yes
   become_user: root
 
   roles:
   - attackerc2
+

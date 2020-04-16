@@ -41,6 +41,19 @@ ansible_connection=ssh
 ansible_python_interpreter=/usr/bin/python3
 ansible_connection=ssh
 
+[windowsdc]
+198.19.10.1
+
+[windowsdc:vars]
+ansible_user=Administrator
+ansible_password=C1sco12345
+ansible_connection=winrm
+ansible_port=5986
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore
+ansible_python_interpreter=/usr/bin/python3
+
+
 [windows]
 198.18.133.50
 198.19.10.1
