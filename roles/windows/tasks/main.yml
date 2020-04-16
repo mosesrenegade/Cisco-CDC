@@ -7,5 +7,5 @@
 - name: Copy AC Profile
   win_copy:
     src: files/acvpn.xml
-    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile'
+    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\acvpn.xml'
 
