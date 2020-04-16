@@ -17,6 +17,7 @@ ansible_connection=ssh
 [attackerc2:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_connection=ssh
+ansible_user=dcloud
 
 [linux]
 198.19.20.5
