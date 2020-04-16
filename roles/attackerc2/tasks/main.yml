@@ -34,23 +34,17 @@
     name: "{{ attacker_installed_packages }}"
     state: present
 
-- name: stat directories if they exist
-  stat:
-    path: "{{ item }}"
-  with_items:
-    - /var/www/html/a
-    - /var/www/html/a/b
-    - /var/www/html/a/b/allp
-  register: dirs
-
 - name create directories if needed
   file:
-    path: "{{ item.invocation.module_args.path }}"
+    path: "{{ item }}"
     state: directory
     owner: www-data
     group: www-data
     mode: 0775
-  with_items: "{{ stat.results }}"
+  with_items:
+    - /var/www/html/a
+    - /var/www/html/a/b
+    - /var/www/html/allp
 
 - name: Let's copy meterpreter stuff
   copy:
