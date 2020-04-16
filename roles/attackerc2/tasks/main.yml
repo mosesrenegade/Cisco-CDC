@@ -33,3 +33,29 @@
   apt:  
     name: "{{ attacker_installed_packages }}"
     state: present
+
+- name: stat directories if they exist
+  stat:
+    path: "{{ item }}"
+  with_items:
+    - /var/www/html/a
+    - /var/www/html/a/b
+    - /var/www/html/a/b/allp
+  register: dirs
+
+- name create directories if needed
+  file:
+    path: "{{ item.invocation.module_args.path }}"
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: 0775
+  with_items: "{{ stat.results }}"
+
+- name: Let's copy meterpreter stuff
+  copy:
+    src: files/10008.exe
+    dest: /var/www/html/a/b/allp/10008.exe
+    owner: www-data
+    group: www-data
+    mode: 0644
