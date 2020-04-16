@@ -17,6 +17,14 @@
   win_shell: Add-DnsServerResourceRecordA -Name "images" -ZoneName "chinabytes.info" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
   ignore_errors: yes
 
+- name: Add APT32 Zone for codehao.net
+  win_shell: 'Add-DnsServerPrimaryZone -Name "codehao.net" -ReplicationScope "Forest" -PassThru'
+  ignore_errors: yes
+
+- name: Powershell Add Record
+  win_shell: Add-DnsServerResourceRecordA -Name "share" -ZoneName "codehao.net" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
+  ignore_errors: yes
+
 # Ansible 2.8 or greater :(
 #- name: add apt32 domains
 #  win_dns_record: 
