@@ -16,7 +16,7 @@
   win_dns_record: 
     name: "images"
     type: "A"
-    value: "198.18.133.60
+    value: "198.18.133.60"
     zone: "chinabytes.info"
 
 
