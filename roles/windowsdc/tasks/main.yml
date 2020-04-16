@@ -10,7 +10,7 @@
     dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\acvpn.xml'
 
 - name: Add APT32 Zone for chinabytes.info
-  win_shell: Add-DnsServerPrimaryZone -Name "chinabytes.info" -ReplicationScope "Forest" -PassThru
+  win_shell: 'Add-DnsServerPrimaryZone -Name "chinabytes.info" -ReplicationScope "Forest" -PassThru'
 
 - name: add apt32 domains
   win_dns_record: 
