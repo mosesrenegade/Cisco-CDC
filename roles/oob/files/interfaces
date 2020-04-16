@@ -1,0 +1,43 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto ens160
+iface ens160 inet static
+        address 198.18.133.51
+        netmask 255.255.192.0
+        network 198.18.128.0
+        broadcast 198.18.191.255
+        gateway 198.18.128.1
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 198.19.10.1
+auto ens192
+iface ens192 inet static
+        address 198.19.10.51
+        netmask 255.255.255.0
+        network 198.19.10.0
+        broadcast 198.19.10.255
+	up route add -net 198.19.40.0 netmask 255.255.255.0 gw 198.19.10.254
+	down route del -net 198.19.40.0 netmask 255.255.255.0 gw 198.19.10.254
+        #up route add -net 192.168.10.0 netmask 255.255.255.0 gw 192.168.40.1
+        #up route add -net 192.168.20.0 netmask 255.255.255.0 gw 192.168.40.1
+        #up route add -net 192.168.50.0 netmask 255.255.255.0 gw 192.168.40.1
+        #up route add -net 192.168.60.0 netmask 255.255.255.0 gw 192.168.40.1
+auto ens224
+iface ens224 inet static
+        address 198.19.20.51
+        netmask 255.255.255.0
+        network 198.19.20.0
+        broadcast 198.19.20.255
+auto ens256
+iface ens256 inet static
+        address 198.19.30.51
+        netmask 255.255.255.0
+        network 198.19.30.0
+        broadcast 198.19.30.255
