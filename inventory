@@ -44,10 +44,8 @@ ansible_user=HACKMDS\Administrator
 ansible_password=C1sco12345
 ansible_connection=winrm
 ansible_port=5986
-ansible_winrm_transport=basic
+ansible_winrm_transport=ntml
 ansible_winrm_server_cert_validation=ignore
 ansible_python_interpreter=/usr/bin/python3
 
-[asa]
-198.19.40.253
 
