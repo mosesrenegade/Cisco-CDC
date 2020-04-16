@@ -1,0 +1,35 @@
+---
+- name: apt update packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    force_apt_get: yes
+  become: true
+  become_user: root
+
+- name: apt upgrade 
+  apt:
+    upgrade: dist
+    update_cache: yes
+    dpkg_options: 'force-confold,force-confdef'
+
+- name: apt clean
+  apt:
+    autoclean: yes
+
+- name: apt autoremove
+  apt:
+    autoremove: yes
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+
+- name: Add Docker APT repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/{{ansible_distribution|lower}} {{ansible_distribution_release}} stable
+
+- name: install the latest packages
+  apt:  
+    name: "{{ attacker_installed_packages }}"
+    state: present

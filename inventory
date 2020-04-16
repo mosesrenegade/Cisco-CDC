@@ -11,6 +11,13 @@ ansible_python_interpreter=/usr/bin/python3
 ansible_python_interpreter=/usr/bin/python3
 ansible_connection=ssh
 
+[attackerc2]
+198.18.133.5
+
+[attackerc2:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=ssh
+
 [linux]
 198.19.20.5
 198.18.10.8

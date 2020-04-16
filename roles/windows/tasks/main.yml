@@ -4,3 +4,8 @@
     src: files/NVM_ServiceProfile.xml
     dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml'
 
+- name: Copy AC Profile
+  win_copy:
+    src: files/acvpn.xml
+    dest: 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile'
+
