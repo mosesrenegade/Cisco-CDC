@@ -40,11 +40,11 @@ ansible_connection=ssh
 198.19.10.2
 
 [windows:vars]
-ansible_user=HACKMDS\Administrator
+ansible_user=Administrator
 ansible_password=C1sco12345
 ansible_connection=winrm
 ansible_port=5986
-ansible_winrm_transport=ntml
+ansible_winrm_transport=basic
 ansible_winrm_server_cert_validation=ignore
 ansible_python_interpreter=/usr/bin/python3
 
