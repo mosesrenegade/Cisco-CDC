@@ -34,7 +34,7 @@
     name: "{{ attacker_installed_packages }}"
     state: present
 
-- name create directories if needed
+- name: create directories if needed
   file:
     path: "{{ item }}"
     state: directory
