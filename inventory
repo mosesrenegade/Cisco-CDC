@@ -40,7 +40,7 @@ ansible_connection=ssh
 198.19.10.2
 
 [windows:vars]
-ansible_user=Administrator
+ansible_user=HACKMDS\Administrator
 ansible_password=C1sco12345
 ansible_connection=winrm
 ansible_port=5986
@@ -50,3 +50,4 @@ ansible_python_interpreter=/usr/bin/python3
 
 [asa]
 198.19.40.253
+

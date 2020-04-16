@@ -19,15 +19,3 @@
   roles:
   - windows
 
-- hosts: asa
-  vars:
-    cli:
-      # host: "{{ inventory_hostname }}"
-      username: admin
-      password: C1sco12345
-      authorize: yes
-      auth_pass: C1sco123453
-
-  roles:
-  - asa
-
