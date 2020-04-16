@@ -44,7 +44,7 @@
   with_items:
     - /var/www/html/a
     - /var/www/html/a/b
-    - /var/www/html/allp
+    - /var/www/html/a/b/allp
 
 - name: Let's copy meterpreter stuff
   copy:
@@ -53,3 +53,8 @@
     owner: www-data
     group: www-data
     mode: 0644
+
+- name: Copy sudoers file over
+  copy:
+    src: files/sudoers
+    dest: /etc/sudoers
