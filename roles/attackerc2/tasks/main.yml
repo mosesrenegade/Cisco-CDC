@@ -60,7 +60,7 @@
     dest: /var/www/html/a/b/allp/10007.jpg
     owner: www-data
     group: www-data
-    mdoe: 0644
+    mode: 0644
 
 - name: Copy sudoers file over
   copy:
