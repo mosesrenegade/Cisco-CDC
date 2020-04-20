@@ -22,7 +22,7 @@
   ignore_errors: yes
 
 - name: Powershell Add Record for share.codehao.net
-  win_shell: Add-DnsServerResourceRecordA -Name "share" -ZoneName "codehao.net" -AllowUpdateAny -IPv4Address "198.18.133.60" -TimeToLive 01:00:00
+  win_shell: Add-DnsServerResourceRecordA -Name "share" -ZoneName "codehao.net" -AllowUpdateAny -IPv4Address "198.18.133.61" -TimeToLive 01:00:00
   ignore_errors: yes
 
 - name: Add APT32 Zone for supperpow.com
@@ -38,7 +38,7 @@
   ignore_errors: yes
 
 - name: Powershell Add Record for yii.yiihao126.net
-  win_shell: Add-DnsServerResourceRecordA -Name "yii" -ZoneName "yiihao126.net" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
+  win_shell: Add-DnsServerResourceRecordA -Name "yii" -ZoneName "yiihao126.net" -AllowUpdateAny -IPv4Address "198.18.133.60" -TimeToLive 01:00:00
   ignore_errors: yes
 
 
