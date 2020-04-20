@@ -13,7 +13,7 @@
   win_shell: 'Add-DnsServerPrimaryZone -Name "chinabytes.info" -ReplicationScope "Forest" -PassThru'
   ignore_errors: yes
 
-- name: Powershell Add Record
+- name: Powershell Add Record for images.chinabytes.info
   win_shell: Add-DnsServerResourceRecordA -Name "images" -ZoneName "chinabytes.info" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
   ignore_errors: yes
 
@@ -21,7 +21,7 @@
   win_shell: 'Add-DnsServerPrimaryZone -Name "codehao.net" -ReplicationScope "Forest" -PassThru'
   ignore_errors: yes
 
-- name: Powershell Add Record
+- name: Powershell Add Record for share.codehao.net
   win_shell: Add-DnsServerResourceRecordA -Name "share" -ZoneName "codehao.net" -AllowUpdateAny -IPv4Address "198.18.133.60" -TimeToLive 01:00:00
   ignore_errors: yes
 
@@ -29,15 +29,15 @@
   win_shell: 'Add-DnsServerPrimaryZone -Name "supperpow.com" -ReplicationScope "Forest" -PassThru'
   ignore_errors: yes
 
-- name: Powershell Add Record
+- name: Powershell Add Record for job.supperpow.com
   win_shell: Add-DnsServerResourceRecordA -Name "job" -ZoneName "supperpow.com" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
   ignore_errors: yes
 
-- name: Add APT32 Zone for supperpow.com
+- name: Add APT32 Zone for yiihao126.net
   win_shell: 'Add-DnsServerPrimaryZone -Name "yiihao126.net" -ReplicationScope "Forest" -PassThru'
   ignore_errors: yes
 
-- name: Powershell Add Record
+- name: Powershell Add Record for yii.yiihao126.net
   win_shell: Add-DnsServerResourceRecordA -Name "yii" -ZoneName "yiihao126.net" -AllowUpdateAny -IPv4Address "198.18.133.49" -TimeToLive 01:00:00
   ignore_errors: yes
 
