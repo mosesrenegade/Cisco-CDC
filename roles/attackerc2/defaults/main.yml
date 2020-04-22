@@ -3,3 +3,9 @@ attacker_installed_packages:
 - unzip
 - libcap2-bin
 - python-pip
+
+gophish_user: dcloud
+gophish_domain: attack.com
+gophish_ssl_cert_path: /etc/ssl/private/gophish.pem
+gophish_csr_path: /etc/ssl/csr/gophish.csr
+gophish_crt_path: /etc/ssl/crt/gophish.crt
