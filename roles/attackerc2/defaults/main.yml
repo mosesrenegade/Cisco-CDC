@@ -3,6 +3,7 @@ attacker_installed_packages:
 - unzip
 - libcap2-bin
 - python-pip
+- python-pip3
 
 gophish_user: dcloud
 gophish_domain: attack.com
