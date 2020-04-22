@@ -65,8 +65,8 @@
 
 - name: Let's copy the mshta components over
   copy:
-    src: files/10007.jpg
-    dest: /var/www/html/a/g/10007.jpg
+    src: files/10007.hta
+    dest: /var/www/html/a/g/10007.hta
     group: www-data
     owner: www-data
     mode: 0644
