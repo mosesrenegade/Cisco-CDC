@@ -1,2 +1,5 @@
 attacker_installed_packages:
 - docker-ce
+- unzip
+- libcap2-bin
+- python-pip
