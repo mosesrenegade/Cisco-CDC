@@ -43,6 +43,11 @@
     src: files/COVID19ResponseQ4.doc
     dest: /root/Desktop/COVID19ResponseQ4.doc
 
+- name: Overwrite the start-empire file
+  copy:
+    src: files/start-empire.sh
+    dest: /root/Desktop/start-empire.sh
+    
 - name: Add secondary ip to Kali
   raw: "nmcli con mod 'Wired connection 1' +ipv4.addresses '198.18.133.60/18'"
   notify: restartnetwork
