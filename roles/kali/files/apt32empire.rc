@@ -1,3 +1,5 @@
+listeners
+disable httpransom
 uselistener http
 set Name httpapt32
 set Host http://yii.yiihao126.net:80
