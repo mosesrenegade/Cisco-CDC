@@ -52,7 +52,8 @@
 - name: Overwrite the start-empire file
   copy:
     src: files/start-empire.sh
-    dest: /root/Desktop/start-empire.sh
+    dest: /root/start-empire.sh
+    mode: '0755'
 
 - name: Add the empire.rc script
   copy:
