@@ -38,6 +38,12 @@
     name: xrdp-sesman
     enabled: yes
 
+- name: Kill nginx
+  systemd:
+    state: stopped
+    name: nginx
+    enabled: no
+
 - name: Let's make sure the COVIDLure exists
   copy:
     src: files/COVID19ResponseQ4.doc
